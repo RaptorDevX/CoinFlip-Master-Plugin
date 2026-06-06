@@ -1,0 +1,29 @@
+name: CoinFlipMaster
+main: com.example.coinflip.CoinFlipPlugin
+version: '${project.version}'
+folia-supported: true
+api-version: '1.20'
+authors: [Codex]
+description: Professional Vault-based CoinFlip plugin.
+depend: [Vault]
+softdepend: [Essentials]
+commands:
+  cf:
+    description: Open or manage CoinFlip.
+    aliases: [coinflip]
+    usage: /cf [create <amount>|reload]
+permissions:
+  coinflip.use:
+    description: Allows opening and joining CoinFlips.
+    default: true
+  coinflip.create:
+    description: Allows creating CoinFlips.
+    default: true
+  coinflip.reload:
+    description: Allows reloading CoinFlip configuration.
+    default: op
+  coinflip.admin:
+    description: Allows all CoinFlip admin actions.
+    default: op
+    children:
+      coinflip.reload: true

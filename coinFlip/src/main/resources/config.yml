@@ -1,0 +1,95 @@
+settings:
+  min-amount: 100
+  max-amount: 1000000000
+  animation-seconds: 3
+  broadcast-winner: true
+  refund-active-on-startup: true
+  refund-active-on-disable: true
+
+gui:
+  main:
+    title: "&8CoinFlip"
+    size: 54
+    fill-empty-slots: true
+    filler-material: "BLACK_STAINED_GLASS_PANE"
+    refresh-ticks: 20
+    previous-slot: 45
+    next-slot: 53
+    close-slot: 49
+  confirm:
+    title: "&8Confirm CoinFlip"
+    size: 27
+    accept-slot: 11
+    decline-slot: 15
+  animation:
+    title: "&8CoinFlip"
+    size: 27
+    left-head-slot: 11
+    right-head-slot: 15
+    status-slot: 13
+
+items:
+  coinflip:
+    name: "&6&l%creator%"
+    lore:
+      - "&7Amount: &a$%amount%"
+      - ""
+      - "&eClick to challenge this player."
+  accept:
+    material: "LIME_CONCRETE"
+    name: "&a&lACCEPT"
+    lore:
+      - "&7Join this CoinFlip for &a$%amount%&7."
+  decline:
+    material: "RED_CONCRETE"
+    name: "&c&lDECLINE"
+    lore:
+      - "&7Return to the CoinFlip list."
+  status:
+    material: "GOLD_INGOT"
+    name: "&6&lFlipping Coin..."
+    lore:
+      - "&7%creator% &fvs &7%joiner%"
+  previous:
+    material: "ARROW"
+    name: "&ePrevious Page"
+  next:
+    material: "ARROW"
+    name: "&eNext Page"
+  close:
+    material: "BARRIER"
+    name: "&cClose"
+  filler:
+    name: " "
+
+sounds:
+  enabled: true
+  open: "UI_BUTTON_CLICK"
+  create: "ENTITY_PLAYER_LEVELUP"
+  join: "BLOCK_NOTE_BLOCK_PLING"
+  tick: "BLOCK_NOTE_BLOCK_HAT"
+  win: "ENTITY_PLAYER_LEVELUP"
+  error: "ENTITY_VILLAGER_NO"
+
+messages:
+  prefix: "&6&lCF &8» &r"
+  no-permission: "&cYou do not have permission to do that."
+  players-only: "&cOnly players can use this command."
+  usage: "&eUsage: /cf create <amount>"
+  invalid-amount: "&cPlease enter a valid amount."
+  amount-too-low: "&cThe minimum CoinFlip amount is $%min%."
+  amount-too-high: "&cThe maximum CoinFlip amount is $%max%."
+  insufficient-funds: "&cYou do not have enough money for this CoinFlip."
+  created: "&aCreated a CoinFlip for &f$%amount%&a."
+  create-failed: "&cCould not create this CoinFlip. Your money was not taken."
+  no-active-flips: "&7There are no active CoinFlips right now."
+  own-coinflip: "&cYou cannot join your own CoinFlip."
+  coinflip-unavailable: "&cThat CoinFlip is no longer available."
+  joined: "&aYou joined &f%creator%'s &aCoinFlip for &f$%amount%&a."
+  winner-broadcast: "&f%winner% &awon the CoinFlip and earned &f$%pot%&a!"
+  refunded: "&aYour active CoinFlip for &f$%amount% &awas refunded."
+  reload: "&aCoinFlip configuration reloaded."
+  title-win: "&a&lYOU WON"
+  title-lose: "&c&lYOU LOST"
+  subtitle-win: "&7You earned &a$%pot%&7."
+  subtitle-lose: "&7Better luck next time."
